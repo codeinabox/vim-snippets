@@ -74,3 +74,54 @@ endsnippet
 snippet marks "$this->markTestSkipped()"
 $this->markTestSkipped(${1});
 endsnippet
+
+snippet expe "$this->expectException(InvalidArgumentException::class)"
+$this->expectException(${1});
+endsnippet
+
+snippet expo "$this->expectOutputString('foo')"
+$this->expectOutputString(${1});
+endsnippet
+
+##############
+# Assertions #
+##############
+snippet assertarray "$this->assertArrayHasKey($key, $array)"
+$this->assertArrayHasKey(${1:$key}, ${2:$array});
+endsnippet
+
+snippet assertclass "$this->assertClassHasAttribute($attributeName, $className)"
+$this->assertClassHasAttribute(${1:$attributeName}, ${2:$className});
+endsnippet
+
+snippet assertclass "phpunit assertClassHasStaticAttribute" i
+$this->assertClassHasStaticAttribute(${1:$attributeName}, ${2:$className});
+endsnippet
+
+snippet assertcontains "phpunit assertContains" i
+$this->assertContains(${1:$needle}, ${2:$haystack});
+endsnippet
+
+snippet assertcontains "phpunit assertContainsOnly" i
+$this->assertContainsOnly(${1:$needle}, ${2:$haystack});
+endsnippet
+
+snippet assertcontains "phpunit assertContainsOnlyInstancesOf" i
+$this->assertContainsOnlyInstancesOf(${1:$classname}, ${2:$haystack});
+endsnippet
+
+snippet assert "phpunit assertCount" i
+$this->assertCount(${1:$expectedCount}, ${2:$haystack});
+endsnippet
+
+snippet assertarray "phpunit assertArraySubset" i
+$this->assertArraySubset(${1:$subset}, ${2:$array});
+endsnippet
+
+snippet assert "phpunit assertEquals" i
+$this->assertEquals(${1:$equals}, ${2:$actual});
+endsnippet
+
+snippet assert "phpunit assertNull" i
+$this->assertNull(${1:$equals}, ${2:$actual});
+endsnippet
